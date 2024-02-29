@@ -82,6 +82,7 @@
 											}
 											?>
 											| Course: <?=$value['COURSE'];?>
+											| Track: <?=$value['TRACK'];?>
 										 	<?php if($value['LAST_UPDATE_BY']!=''):?>
 											  | <b>Last Updated by </b> 
 											  <?php echo htmlentities($value['LAST_UPDATE_BY']);?> on </b><?php echo htmlentities($value['UPDATION_DATE']);?>

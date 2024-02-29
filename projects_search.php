@@ -41,7 +41,7 @@
 					$next_page = $page_no + 1;
 					$adjacents = "2"; 
 
-					$result_count = mysqli_query($conn,"SELECT COUNT(*) As total_records FROM `tbl_storage` WHERE IS_ACTIVE='1' AND PUBLISHED_YEAR BETWEEN '".$_GET['PUB_YEAR_FROM']."' AND '".$_GET['PUB_YEAR_TO']."' AND POST_TITLE LIKE'%".$_GET['KEYWORDS']."%' OR POST_DETAILS LIKE'%".$_GET['KEYWORDS']."%'");
+					$result_count = mysqli_query($conn,"SELECT COUNT(*) As total_records FROM `tbl_storage` WHERE IS_ACTIVE='1' AND PUBLISHED_YEAR BETWEEN '".$_GET['PUB_YEAR_FROM']."' AND '".$_GET['PUB_YEAR_TO']."' AND POST_TITLE LIKE'%".$_GET['KEYWORDS']."%' OR POST_DETAILS LIKE'%".$_GET['KEYWORDS']."%' OR TRACK LIKE'%".$_GET['KEYWORDS']."%'");
 					$total_records = mysqli_fetch_array($result_count);
 					$total_records = $total_records['total_records'];
 					$total_no_of_pages = ceil($total_records / $total_records_per_page);
@@ -96,6 +96,7 @@
 											}
 											?>
 											| Course: <?=$value['COURSE'];?>
+											| Track: <?=$value['TRACK'];?>
 										 	<?php if($value['LAST_UPDATE_BY']!=''):?>
 											  | <b>Last Updated by </b> 
 											  <?php echo htmlentities($value['LAST_UPDATE_BY']);?> on </b><?php echo htmlentities($value['UPDATION_DATE']);?>

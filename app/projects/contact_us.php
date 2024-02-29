@@ -15,7 +15,7 @@
 				        <div class="col-sm-12">
           		      <div class="form-group">
                   	<label class="control-label">KEYWORDS</label>
-                    	<input type="text" class="form-control" name="KEYWORDS" placeholder="search a keyword, title, abstract,author" required>
+                    	<input type="text" class="form-control" name="KEYWORDS" placeholder="search a keyword, title, abstract or author" required>
                   	</div>
                 </div>
 

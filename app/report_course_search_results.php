@@ -85,7 +85,7 @@ class MYPDF extends TCPDF {
     $pdf->SetFont('helvetica', '', 11);  
     $pdf->AddPage(); 
     $pdf->SetAlpha(0.1);
-    $img_file = file_get_contents('../images/CCS.png');
+    $img_file = file_get_contents('../images/logo/ccs.png');
 	$pdf->Image('@' . $img_file, 25, 50, 160, '', '', '', '', false, 50, '', false);
 	$pdf->SetAlpha(1);
 	$content = '';  
@@ -93,12 +93,12 @@ class MYPDF extends TCPDF {
     <table width="100%">
       <tr>
         <td align="left" width="20%">
-        <img src="../images/CCS.png" alt="" class="float-left" width="80">
+        <img src="../images/logo/ccs.png" alt="" class="float-left" width="80">
         </td>
           <td align="center" width="60%">
 		  <span>REPUBLC OF THE PHILIPPINES</span><br>
           <span>ILOCOS SUR POLYTECHNIC STATE COLLEGE</span><br>
-		  <span>COLLEGE OF COMPUTER STUDIES</span><br>
+		  <span>COLLEGE OF COMPUTING STUDIES</span><br>
           <span>ILOCOS SUR PHILIPPINES</span>
           <br>
           <br>
